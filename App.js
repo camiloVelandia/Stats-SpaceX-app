@@ -8,18 +8,13 @@
 
 import React from 'react';
 import {NavigationContainer} from '@react-navigation/native'
-import {
-  SafeAreaView,
-  StyleSheet,
-  View,
-  Text,
-  
-} from 'react-native';
+import { SafeAreaView,StyleSheet,View,Text,} from 'react-native';
+import CoinStack from 'statSpaceX/src/components/counter/CounterStack';
 
 const App = () => {
   return (
     <NavigationContainer>
-     
+      <CoinStack/>
     </NavigationContainer>
   );
 };
