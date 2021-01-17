@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {View, Text} from 'react-native'
-import {Container, Overlay, Box, Title, Number} from './styles'
+import {Container, Overlay, Box, Title, NumberContainer, Number, NumberTime, TimerContainer, CounterInfo, CounterInfoItem, CounterInfoType} from './styles'
 import getNextLaunch from '../../services/getNextLaunch';
 import getOneRocket from '../../services/getOneRocket';
 
@@ -51,10 +51,10 @@ const CounterScreen = () => {
 
   Object.keys(timeLeft).forEach((interval, index) => {
     timerComponents.push(
-      <Number key={index}>
-        <Text>{timeLeft[interval]}</Text>
-        <Text>{interval}</Text>{' '}
-      </Number>,
+      <NumberContainer key={index}>
+        <Number>{timeLeft[interval]}</Number>
+        <NumberTime>{interval}</NumberTime>
+      </NumberContainer>,
     );
   });
 
@@ -65,23 +65,23 @@ const CounterScreen = () => {
       <Box>
         <Title>Up Next</Title>
 
-        <Text>
+        <TimerContainer>
             {timerComponents.length ? (
               timerComponents
             ) : (
-              <Text>Time's up!</Text>
+              <Text>Waiting for next launch</Text>
             )}
-          </Text>
-        <View>
-          <Text>
-            <Text>mission:</Text>
+          </TimerContainer>
+        <CounterInfo>
+          <CounterInfoItem>
+            <CounterInfoType>mission: </CounterInfoType>
             {nextlaunch.name}
-          </Text>
-          <Text>
-            <Text>Rocket:</Text>
+          </CounterInfoItem>
+          <CounterInfoItem>
+            <CounterInfoType>Rocket: </CounterInfoType>
             {rocketUsed.name || 'falcon'}
-          </Text>
-        </View>
+          </CounterInfoItem>
+        </CounterInfo>
       </Box>
       <Overlay/>
     </Container>
