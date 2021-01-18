@@ -1,18 +1,20 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack'
-import {View, Image} from 'react-native'
-import CounterScreen from './CounterScreen'
-import Colors from 'statSpaceX/src/res/colors'
+import {createStackNavigator} from '@react-navigation/stack';
+import {View, Image} from 'react-native';
+import AboutScreen from './AboutScreen';
+import Colors from 'statSpaceX/src/res/colors';
 
-const Stack = createStackNavigator()
 
-const CounterStack = () => {
+const Stack = createStackNavigator();
+
+
+const AboutStack = () => {
   return (
     <Stack.Navigator
       screenOptions={{
-         headerStyle:{
-           backgroundColor: Colors.black
-         },
+        headerStyle: {
+          backgroundColor: Colors.black,
+        },
         headerTitleAlign: 'center',
         headerTitle: (
           <View
@@ -23,12 +25,12 @@ const CounterStack = () => {
             />
           </View>
         ),
-        
+
         headerTintColor: Colors.white,
       }}>
-      <Stack.Screen name="Counter" component={CounterScreen} />
+      <Stack.Screen name="About" component={AboutScreen} />
     </Stack.Navigator>
   );
 };
 
-export default CounterStack;
+export default AboutStack;
