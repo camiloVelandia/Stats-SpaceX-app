@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import CapsulCard from '../CapsulCard';
 import getDragonsInfo from '../../services/getDragonsInfo';
 // import Spinner from '../Spinner';
-import {Container} from './styles';
+import {Container,} from './styles';
 import {Text} from 'react-native';
 
 const CapsulesLayout = () => {
@@ -23,7 +23,6 @@ const CapsulesLayout = () => {
 
   return (
     <Container>
-    <Text >sdfsd</Text>
       {dragon.map((item) => (
         <CapsulCard
           key={item.id}

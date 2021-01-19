@@ -1,12 +1,15 @@
-// import React from 'react';
-// import {Section} from './styles';
+import React from 'react';
+import {Section, Title, Overlay} from './styles';
 
-// const Banner = (props) => {
-//   return (
-//     <Section backImage={props.backImage}>
-//       {/* <h1> {props.title}</h1> */}
-//     </Section>
-//   );
-// };
+const Banner = (props) => {
+  console.log( 'back', props.backImage)
+  return (
+    <Section backImage={props.backImage} source={props.backImage}  style={{
+            resizeMode: "cover",}}>
+      <Title> {props.title}</Title>
+      <Overlay />
+    </Section>
+  );
+};
 
-// export default Banner;
+export default Banner;

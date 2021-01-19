@@ -8,6 +8,8 @@ import {
   Letter,
   Ul,
   Lists,
+  ListHead,
+  ListItem,StatusText
 } from './styles';
 
 
@@ -19,31 +21,29 @@ const CapsulCard = (props) => {
         <Letter>{props.info}</Letter>
         <Lists>
           <Ul>
-            <Letter>Specs</Letter>
-            <Letter> capacity: {props.capacity}</Letter>
-            <Letter> first flight: {props.first_flight}</Letter>
-            <Letter> type: {props.type}</Letter>
-            <Letter> height: {props.height}</Letter>
-            <Letter> feet: {props.feet}</Letter>
+            <ListHead>Specs</ListHead>
+            <ListItem> capacity: {props.capacity}</ListItem>
+            <ListItem> first flight: {props.first_flight}</ListItem>
+            <ListItem> type: {props.type}</ListItem>
+            <ListItem> height: {props.height}</ListItem>
+            <ListItem> feet: {props.feet}</ListItem>
           </Ul>
 
           <Ul>
-            <Letter>thrusters</Letter>
-            <Letter> type: {props.tpropulsor}</Letter>
-            <Letter> amount: {props.amount}</Letter>
-            <Letter> fuel1: {props.fuel1}</Letter>
-            <Letter> fuel2: {props.fuel2}</Letter>
-            <Letter> isp: {props.isp}</Letter>
-            <Letter> pods: {props.pods}</Letter>
+            <ListHead>thrusters</ListHead>
+            <ListItem> type: {props.tpropulsor}</ListItem>
+            <ListItem> amount: {props.amount}</ListItem>
+            <ListItem> fuel1: {props.fuel1}</ListItem>
+            <ListItem> fuel2: {props.fuel2}</ListItem>
+            <ListItem> isp: {props.isp}</ListItem>
+            <ListItem> pods: {props.pods}</ListItem>
           </Ul>
         </Lists>
-        {/* <Figure>
-          <img src={props.image} />
-        </Figure> */}
+        <Figure source={{uri: `${props.image}`,}}/>
       </Info>
 
       <Status>
-        <Letter>status: {props.status || 'wait...'}</Letter>
+        <StatusText>status: {props.status || 'wait...'}</StatusText>
       </Status>
     </Container>
   );

@@ -1,13 +1,17 @@
 import React from 'react';
 import {Container} from './styles';
-// import Banner from '../../components/Banner';
+import Banner from '../../components/Banner';
 import CapsulesLayout from '../../components/CapsuleLayout';
+import {ScrollView} from 'react-native';
+
 
 const DragonScreen = (props) => {
   return (
     <Container>
-      {/* <Banner title={'Dragons'} backImage="/images/cap.jpg" /> */}
+      <ScrollView>
+      <Banner title={'Dragons'} backImage={require('statSpaceX/src/assets/images/Dragon.jpg')} />
       <CapsulesLayout />
+      </ScrollView>
     </Container>
   );
 };
