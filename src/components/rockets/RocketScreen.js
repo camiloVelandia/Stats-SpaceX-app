@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../components/Banner';
 import RocketLayout from '../../components/RocketLayout';
-import {ScrollView, Text} from 'react-native';
+import {ScrollView} from 'react-native';
 import {Container} from './styles';
 
 const RocketScreen = () => {
