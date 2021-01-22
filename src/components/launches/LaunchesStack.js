@@ -3,6 +3,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {View, Image} from 'react-native';
 import LaunchesScreen from './LaunchesScreen';
 import PastLaunches from './PastLaunches';
+import NextLaunches from './NextLaunches';
 import Colors from 'statSpaceX/src/res/colors';
 
 const Stack = createStackNavigator();
@@ -28,7 +29,8 @@ const LaunchesStack = () => {
         headerTintColor: Colors.white,
       }}>
       <Stack.Screen name="Launches" component={LaunchesScreen} />
-      {/* <Stack.Screen name="PastLaunches" component={PastLaunches} /> */}
+      <Stack.Screen name="PastLaunches" component={PastLaunches} />
+      <Stack.Screen name="NextLaunches" component={NextLaunches} />
     </Stack.Navigator>
   );
 };

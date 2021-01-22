@@ -3,19 +3,19 @@ import {Section, Btn, Text} from './styles';
 
 const BtnLaunches = (props) => {
 
-  const HandlePress=()=>{
-    navigation.navigate(`${launches}`)
-    console.log('go', props)
+  const target= props
+  const HandlePress=(prop, dest)=>{
+    prop.props.navigation.navigate(dest);
   }
-  useEffect(()=>{
-  })
+  
+
 
   return (
     <Section>
-      <Btn onPress={() => HandlePress()}>
+      <Btn onPress={() => HandlePress(target, 'PastLaunches')}>
         <Text>past launches</Text>
       </Btn>
-      <Btn>
+      <Btn onPress={() => HandlePress(target, 'NextLaunches')}>
         <Text>next launches</Text>
       </Btn>
     </Section>

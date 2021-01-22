@@ -1,13 +1,14 @@
 import React from 'react';
-import PastLayout from '../../PastLayout';
+import NextLayout from '../../NextLayout';
 import {ScrollView, Text} from 'react-native';
 
-const PastLaunches = () => {
+const NextLaunches = () => {
   return (
+ 
     <ScrollView style={{backgroundColor:'#000'}}>
-      <PastLayout />
+      <NextLayout />
     </ScrollView>
   );
 };
 
-export default PastLaunches;
+export default NextLaunches;

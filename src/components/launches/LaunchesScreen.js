@@ -4,10 +4,11 @@ import {Container} from './styles';
 import Latest from '../../components/Latest';
 import RecentLayout from '../../components/RecentLayout';
 import BtnLaunches from '../../components/BtnLaunches';
-import {ScrollView} from 'react-native';
+import {ScrollView, Pressable, Text} from 'react-native';
 
 
-const LaunchesScreen = () => {
+const LaunchesScreen = (props) => {
+ 
   return (
     <Container>
       <ScrollView>
@@ -16,8 +17,8 @@ const LaunchesScreen = () => {
           backImage={require('statSpaceX/src/assets/images/starlink1.webp')}
         />
         <Latest />
-      <RecentLayout />
-      <BtnLaunches />
+        <RecentLayout />
+        <BtnLaunches props={props}/>
       </ScrollView>
     </Container>
   );
