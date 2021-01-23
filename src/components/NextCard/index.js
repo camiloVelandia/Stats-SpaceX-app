@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Section, Title, Figure, Name, Text, Info, Bullet} from './styles';
+import {Section, Title, Figure, Name, Text, Info, Bullet, BulletText} from './styles';
 
 const NextCard = (props) => {
   const [date, setDate] = useState('');
@@ -19,9 +19,7 @@ const NextCard = (props) => {
   return (
     <Section>
       <Title>Next missions</Title>
-      {/* <Figure>
-        <img src={props.image || '/images/escudo.png'} />
-      </Figure>
+      <Figure source={{uri: `${props.image}`}}/>
       <Name>{props.name}</Name>
       <Text>
         {props.details ||
@@ -29,14 +27,14 @@ const NextCard = (props) => {
       </Text>
       <Info>
         <Bullet>
-          <p>date:</p>
-          <p>{date}</p>
+          <BulletText>date:</BulletText>
+          <BulletText>{date}</BulletText>
         </Bullet>
         <Bullet>
-          <p>flight number:</p>
-          <p>{props.number}</p>
+          <BulletText>flight number:</BulletText>
+          <BulletText>{props.number}</BulletText>
         </Bullet>
-      </Info> */}
+      </Info>
     </Section>
   );
 };

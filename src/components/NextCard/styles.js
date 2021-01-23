@@ -17,42 +17,41 @@ export const Title = styled.Text`
   margin: 0;
 `;
 export const Figure = styled.Image`
-  /* max-width: 228px;
-  max-height: 218px;
-  height: 100%;
+  width: 228px;
+  height: 218px;
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  & img {
-    height: 100%;
-    object-fit: cover;
-  } */
+ 
 `;
 export const Name = styled.Text`
-  /* font-size: 24px;
+  font-size: 24px;
   margin-top: 30px;
   margin-bottom: 30px;
   text-transform: uppercase;
   padding: 0 20px;
   margin: 0;
-  margin-top: 40px; */
+  margin-top: 40px;
+  color: #fff;
 `;
 export const Text = styled.Text`
-  /* padding: 20px 20px;
+  padding: 20px 20px;
   text-align: justify;
   padding-bottom: 30px;
-  margin: 0; */
+  margin: 0;
+  color: #fff;
 `;
 export const Info = styled.View`
-  /* padding: 0 20px;
+  padding: 0 20px;
   padding-bottom: 20px;
-  display: flex;
-  justify-content: space-around; */
+  justify-content: space-around;
 `;
 export const Bullet = styled.View`
-  /* & p {
-    margin: 0;
-    text-align: center;
-    text-transform: uppercase;
-  } */
+  flex-direction:row;
+`;
+export const BulletText = styled.Text`
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
 `;
