@@ -12,6 +12,7 @@ import AboutStack from 'statSpaceX/src/components/about/AboutStack';
 import DragonsStack from 'statSpaceX/src/components/dragon/DragonStack';
 import RocketsStack from 'statSpaceX/src/components/rockets/RocketsStack';
 import LaunchesStack from 'statSpaceX/src/components/launches/LaunchesStack';
+import StatsStack from 'statSpaceX/src/components/stats/StatsStack';
 import {NavigationContainer} from '@react-navigation/native'
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Image} from 'react-native'
@@ -78,7 +79,7 @@ const App = () => {
         />
         <Tabs.Screen
           name="Stats"
-          component={AboutStack}
+          component={StatsStack}
           options={{
             tabBarIcon: ({size, color}) => (
               <Image
