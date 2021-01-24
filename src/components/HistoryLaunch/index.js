@@ -1,19 +1,13 @@
 import React, {useState, useEffect} from 'react';
 import {Section, Title, Container} from './styles';
 import getRocketInfo from '../../services/getRocketInfo';
+import {
+  VictoryBar,
+  VictoryChart,
+  VictoryGroup,
+  VictoryTheme,
+} from 'victory-native';
 
-const options = {
-  scales: {
-    yAxes: [
-      {
-        ticks: {
-          beginAtZero: true,
-        },
-      },
-    ],
-  },
-  responsive: true,
-};
 
 const HistoryLaunch = () => {
   const [rocket, setRocket] = useState([]);
@@ -37,34 +31,33 @@ const HistoryLaunch = () => {
     setRocketSucces(succes);
   }, [rocket]);
 
-  const data = {
-    labels: rocketName,
-    datasets: [
-      {
-        label: 'percent',
-        data: rocketSucces,
-        backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(255, 206, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-        ],
-        borderColor: [
-          'rgba(255, 99, 132, 1)',
-          'rgba(54, 162, 235, 1)',
-          'rgba(255, 206, 86, 1)',
-          'rgba(75, 192, 192, 1)',
-        ],
-        borderWidth: 1,
-      },
-    ],
-  };
 
+console.log(rocketSucces[0]);
+  const data = {
+    launches:[
+      {x:rocketName[0], y:rocketSucces[0]  || 1},
+      {x:rocketName[1], y:rocketSucces[1] || 1},
+      {x:rocketName[2], y:rocketSucces[2] || 1},
+      {x:rocketName[3], y:rocketSucces[3] || 1},
+    ]
+  };
   return (
     <Section>
       <Title>Rockets succes rate</Title>
-      <Container>
-      </Container>
+      <VictoryChart width={320} theme={VictoryTheme.grayscale}>
+        <VictoryGroup offset={1}>
+          <VictoryBar
+            data={data.launches}
+            style={{data: {fill: 'blue'}}}
+          />
+          
+          <VictoryBar
+            data={data.launches}
+            style={{data: {fill: 'blue'}}}
+          />
+          
+        </VictoryGroup>
+      </VictoryChart>
     </Section>
   );
 };
