@@ -1,5 +1,5 @@
 import React from 'react';
-import {Section, Title, Container} from './styles';
+import {Section, TitleText, Container, TitleView} from './styles';
 import {VictoryLabel, VictoryTooltip, VictoryPie} from 'victory-native';
 
 const StatCard = (props) => {
@@ -9,7 +9,9 @@ const StatCard = (props) => {
   })
   return (
     <Section>
-      <Title>{props.title || 'titulo'}</Title>
+    <TitleView>
+      <TitleText>{props.title || 'titulo'}</TitleText>
+    </TitleView>
       <Container>
         <VictoryPie
           style={{labels: {fill: 'white'}}}

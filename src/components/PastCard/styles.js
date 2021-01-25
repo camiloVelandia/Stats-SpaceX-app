@@ -10,7 +10,7 @@ export const Section = styled.View`
 export const Title = styled.Text`
   background-color: #fff;
   color:#000;
-  padding: 30px 0;
+  padding: 20px ;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
@@ -22,7 +22,6 @@ export const Figure = styled.Image`
   margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 30px;
-  
 `;
 export const Name = styled.Text`
   font-size: 24px;
@@ -32,6 +31,7 @@ export const Name = styled.Text`
   padding: 0 20px;
   margin: 0;
   color: #fff;
+  font-weight:700;
 `;
 export const Text = styled.Text`
 color: #fff;
@@ -56,7 +56,7 @@ export const BulletInfo = styled.Text`
     margin: 0;
     text-align: center;
     font-size: 12px;
-    padding: 0 5px;
+    padding: 5px 5px;
     text-transform: uppercase;
     color: #fff;
   

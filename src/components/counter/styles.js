@@ -6,9 +6,7 @@ export const Container = styled.ImageBackground`
   align-items:center;
   position:relative;
 `;
-export const Image = styled.Image`
-  
-`;
+
 export const Overlay = styled.View`
   flex: 1;
   position: absolute;
@@ -31,7 +29,7 @@ export const Box = styled.View`
 export const Title = styled.Text`
   color: #fff;
   text-align:center;
-  font-size:50px;
+  font-size:55px;
   font-weight:700;
   padding-bottom:50px;
   text-transform:uppercase
@@ -42,12 +40,11 @@ export const NumberContainer = styled.View`
 export const TimerContainer = styled.View`
   flex-direction:row;
   justify-content:center;
-  color: #fff;
 `;
 export const Number = styled.Text`
   color: #fff;
   text-align:center;
-  font-size:28px;
+  font-size:35px;
   font-weight:700;
   margin:0 auto;
   text-align:center;
@@ -59,9 +56,9 @@ export const NumberTime = styled.Text`
   font-weight:500;
   margin:0 auto;
   text-align:center;
+  text-transform:uppercase;
 `;
 export const CounterInfo = styled.View`
-  color: #fff;
   text-align:center;
   justify-content:center;
   flex-direction:column;

@@ -18,15 +18,15 @@ export const Name = styled.Text`
   font-weight: 600;
   font-size: 28px;
   color: #fff;
+  padding-left:15px;
 `;
 export const Letter = styled.Text`
-  border: 1px solid #fff;
-  padding: 40px 15px;
+  padding: 30px 15px 0;
   color: #fff;
 
 `;
 export const Lists = styled.View`
-  padding: 40px 15px;
+  padding: 20px 15px;
   justify-content: space-around;
 `;
 
@@ -34,7 +34,7 @@ export const Lists = styled.View`
 export const Ul = styled.View`
   margin: 0;
   padding: 0;
-  margin-top: 30px;
+  margin-top: 20px;
   width: 100%; 
 `;
 
@@ -56,10 +56,10 @@ export const StatusText = styled.Text`
 `;
 
 export const Figure = styled.Image`
-  width: 224px;
-  height: 224px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 30px;
 `;
 
 

@@ -19,7 +19,12 @@ const NextCard = (props) => {
   return (
     <Section>
       <Title>Next missions</Title>
-      <Figure source={{uri: `${props.image}`}}/>
+      <Figure
+        source={
+          {uri: `${props.image}`} ||
+          require('statSpaceX/src/assets/images/escudo.png')
+        }
+      />
       <Name>{props.name}</Name>
       <Text>
         {props.details ||

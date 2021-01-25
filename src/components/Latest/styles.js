@@ -19,7 +19,7 @@ export const TitleText = styled.Text`
     margin: 0;
 `;
 export const Main = styled.View`
-  padding: 30px;
+  padding: 20px;
   align-items: center;
   justify-content: center;
   
@@ -28,13 +28,14 @@ export const Main = styled.View`
 export const Image = styled.Image`
   width: 200px;
   height:200px;
+  margin-bottom:30px;
 `;
 
 export const Info = styled.View`
   width: 100%;
   flex-direction: column;
   justify-content: center;
-  padding-left: 15px;
+  padding-left: 0px;
   text-align: center;
 
 `;
@@ -42,10 +43,9 @@ export const InfoName = styled.Text`
     font-size: 24px;
     text-transform: uppercase;
     margin: 0;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     color: #fff;
-
- 
+    font-weight:700;
 `;
 export const InfoText = styled.Text`
     font-size: 14px;
@@ -56,7 +56,6 @@ export const InfoText = styled.Text`
 export const Bullets = styled.View`
   flex-direction: column;
   padding-top: 30px;
- 
 `;
 
 export const BulletItem= styled.Text`

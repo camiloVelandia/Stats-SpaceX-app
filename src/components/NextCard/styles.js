@@ -10,7 +10,7 @@ export const Section = styled.View`
 export const Title = styled.Text`
   background-color: #fff;
   color: #000;
-  padding: 30px 0;
+  padding: 20px ;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
@@ -21,12 +21,11 @@ export const Figure = styled.Image`
   height: 218px;
   margin: 0 auto;
   margin-top: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
  
 `;
 export const Name = styled.Text`
   font-size: 24px;
-  margin-top: 30px;
   margin-bottom: 30px;
   text-transform: uppercase;
   padding: 0 20px;

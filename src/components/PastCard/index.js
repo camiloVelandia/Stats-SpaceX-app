@@ -19,7 +19,7 @@ const PastCard = (props) => {
   return (
     <Section>
       <Title>recent missions</Title>
-      <Figure source={{uri: `${props.image}`}}/>
+      <Figure source={{uri: `${props.image}`} || require('statSpaceX/src/assets/images/escudo.png' )}/>
       <Name>{props.title}</Name>
       <Text>{props.detail}</Text>
       <Info>

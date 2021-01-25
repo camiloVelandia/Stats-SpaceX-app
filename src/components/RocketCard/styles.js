@@ -12,7 +12,6 @@ export const Container = styled.View`
 export const Main = styled.View`
   margin-bottom: 30px;
   text-align: center;
-  
 `;
 
 export const Info = styled.View`
@@ -22,18 +21,19 @@ export const Info = styled.View`
 `;
 
 export const Image = styled.Image`
-  width: 224px;
-  height: 224px;
+  width: 240px;
+  height: 240px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 20px;
   margin-bottom:30px;
 `;
 
 export const Name = styled.Text`
-  font-size: 20px;
+  font-size: 30px;
   font-weight:700;
   margin-bottom:15px;
   color: #fff;
+  text-transform:uppercase;
 `;
 export const Text = styled.Text`
   font-size: 14px;
@@ -50,6 +50,7 @@ export const UlHead = styled.Text`
   text-transform: capitalize;
   font-size: 18px;
   margin: 0;
+  font-weight:700;
   padding-bottom: 10px;
   color: #fff;
 `;
@@ -65,7 +66,7 @@ export const StatusText = styled.Text`
 border:2px solid red;
 padding: 10px 20px;
 font-size: 18px;
-color: #fff;
+color: red;
 width:300px;
 text-align:center
 `;

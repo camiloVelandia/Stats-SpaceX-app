@@ -11,10 +11,6 @@ const GridStats = () => {
   const [succes, setsucces] = useState('');
   const [fail, setfail] = useState('');
 
-  const [customer, setcustomer] = useState([]);
-  const [customerName, setcustomerName] = useState([]);
-  const [customerLaunches, setcustomerLaunches] = useState([]);
-
   // bring the data for launch stats
   useEffect(() => {
     getPastLaunches().then((data) => {
@@ -52,56 +48,11 @@ const GridStats = () => {
     ]
   };
 
-  // bring the data for customer stats
-  useEffect(() => {
-    getPayload().then((data) => {
-      setcustomer(data);
-    });
-  }, []);
-
-  useEffect(() => {
-    const name = customer.map((item) => {
-      return item.customers[0];
-    });
-    let unicos = Array.from(new Set(name));
-    let first = unicos.slice(0, 5);
-    setcustomerName(first);
-  }, [customer]);
-
-  useEffect(() => {
-    const result = [];
-    for (let i = 0; i < customerName.length; i++) {
-      let element = customer.filter((item) => {
-        const total = item.customers.includes(customerName[i]);
-        return total;
-      });
-      result.push(element.length);
-    }
-    setcustomerLaunches(result);
-  }, [customerName]);
-
-  const dataCustomer = {
-    
-    datasets: [
-      [
-        {
-          number: [fail, succes],
-          label: ['FAIL', 'SUCCESS'],
-        },
-      ],
-      [
-        {
-          number: [fail, succes],
-          label: ['FAIL', 'SUCCESS'],
-        },
-      ],
-    ],
-  };
+ 
 
   return (
     <Grid>
       <StatCard title="launch stats" items={dataSucces} />
-      <StatCard title="commercial Customers" items={dataCustomer} />
     </Grid>
   );
 };
