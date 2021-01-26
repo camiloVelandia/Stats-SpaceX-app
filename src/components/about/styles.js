@@ -5,7 +5,7 @@ export const Section = styled.ImageBackground`
   justify-content: center;
   align-items: center;
   position: relative;
-  
+  background-color:#000
 `;
 export const Overlay = styled.View`
   flex: 1;
@@ -73,4 +73,11 @@ export const Links = styled.Text`
   padding:0;
   left:0;
   right:0;
+`;
+export const Loader = styled.ActivityIndicator`
+  margin-top: 60px;
+`;
+export const LoaderContainer = styled.View`
+  flex:1;
+  background-color:#000;
 `;

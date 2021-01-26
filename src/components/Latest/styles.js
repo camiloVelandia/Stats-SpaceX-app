@@ -67,3 +67,6 @@ export const BulletItem= styled.Text`
     text-align: center;
     color: #fff;
 `;
+export const Loader = styled.ActivityIndicator`
+  margin-top: 60px;
+`;

@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import RocketCard from '../RocketCard';
-import {Container} from './styles';
+import {Container, Loader} from './styles';
 import getRocketInfo from '../../services/getRocketInfo';
-// import Spinner from '../Spinner';
 
 const RocketLayout = () => {
   const [rocket, setRocket] = useState([]);
   const [loading, setLoading] = useState(false);
-
+ 
   useEffect(() => {
     setLoading(true);
     getRocketInfo().then((data) => {
@@ -16,9 +15,9 @@ const RocketLayout = () => {
     });
   }, []);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Loader color='#fff' size='large' />;
+  }
 
   return (
     <Container>

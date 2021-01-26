@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import CapsulCard from '../CapsulCard';
 import getDragonsInfo from '../../services/getDragonsInfo';
-// import Spinner from '../Spinner';
-import {Container,} from './styles';
+import {Container, Loader} from './styles';
 import {Text} from 'react-native';
 
 const CapsulesLayout = () => {
@@ -17,9 +16,9 @@ const CapsulesLayout = () => {
     });
   }, []);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Loader color='#fff' size='large' />;
+  }
 
   return (
     <Container>

@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import PastCard from '../PastCard';
-import {Section, Pagination, BtnContainer, Text} from './styles';
+import {Section, Pagination, BtnContainer, Text, Loader} from './styles';
 import getPastLaunches from '../../services/getPastLaunches';
-// import Spinner from '../Spinner';
 
 const PastLayout = () => {
   const [pastlaunches, setpastlaunches] = useState({docs: []});
@@ -32,9 +31,9 @@ const PastLayout = () => {
     });
   }, [page]);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Loader size='large' color='#fff' />;
+  }
 
   return (
     <Section>

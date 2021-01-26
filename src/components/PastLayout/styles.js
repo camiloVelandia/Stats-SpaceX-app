@@ -29,5 +29,8 @@ export const Pagination = styled.Pressable`
 `;
 export const Text = styled.Text`
   color: #fff;
- 
+`;
+
+export const Loader = styled.ActivityIndicator`
+  margin-top: 60px;
 `;

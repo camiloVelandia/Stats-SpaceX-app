@@ -1,19 +1,39 @@
 import React,{useState, useEffect} from 'react';
-import {Section, Overlay , Container, Article, Title, Letter, Item, ItemTitle, ItemLi, Links} from './styles';
+import {
+  Section,
+  Overlay,
+  Container,
+  Article,
+  Title,
+  Letter,
+  Item,
+  ItemTitle,
+  ItemLi,
+  Links,
+  Loader,
+  LoaderContainer,
+} from './styles';
 import getCompanyInfo from '../../services/getCompanyInfo';
-import {Linking, TouchableOpacity, ScrollView} from 'react-native';
+import {Linking, TouchableOpacity, ScrollView } from 'react-native';
 
 
 const AboutScreen = () => {
 
   
   const [info, setinfo] = useState({links: {}});
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    getCompanyInfo().then((data) => setinfo({...data}));
+    setLoading(true);
+    getCompanyInfo().then((data) =>{
+      setinfo({...data}),
+      setLoading(false)
+    }) 
   }, []);
 
-
+  if (loading) {
+    return <LoaderContainer><Loader color="#fff" size="large" /></LoaderContainer>
+  }
 
   return (
     <ScrollView>

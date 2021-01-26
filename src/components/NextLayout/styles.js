@@ -8,3 +8,7 @@ export const Section = styled.View`
   justify-content: space-between;
   flex-wrap: wrap;
 `;
+
+export const Loader = styled.ActivityIndicator`
+  margin-top: 60px;
+`;

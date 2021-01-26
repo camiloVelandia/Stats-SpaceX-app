@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import NextCard from '../NextCard';
-import {Section} from './styles';
+import {Section, Loader} from './styles';
 import getUpcomingLaunches from '../../services/getUpcomingLaunches';
-// import Spinner from '../Spinner';
 
 const NextLayout = () => {
   const [upcominglaunches, setupcominglaunches] = useState([]);
@@ -16,9 +15,9 @@ const NextLayout = () => {
     });
   }, []);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Loader size='large' color='#fff' />;
+  }
 
   return (
     <Section>

@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {Section, Title, Main, Image, Info, Bullets, TitleText, InfoName, InfoText, BulletItem} from './styles';
+import {Section, Title, Main, Image, Info, Bullets, TitleText, InfoName, InfoText, BulletItem, Loader} from './styles';
 import getLatestLaunch from '../../services/getLatestLaunch';
 import getOneRocket from '../../services/getOneRocket';
-// import Spinner from '../Spinner';
 
 const Latest = () => {
   const [latest, setLatest] = useState({links: {patch: {}}});
@@ -34,9 +33,9 @@ const Latest = () => {
     setDate(today.toLocaleDateString('en-US'));
   }, [latest]);
 
-  // if (loading) {
-  //   return <Spinner />;
-  // }
+  if (loading) {
+    return <Loader color='#fff' size='large' />;
+  }
 
   return (
     <Section>
