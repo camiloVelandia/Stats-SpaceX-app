@@ -1,13 +1,13 @@
 import React from 'react';
 import NextLayout from '../../NextLayout';
-import {ScrollView, Text} from 'react-native';
+import {Container} from './styles';
 
 const NextLaunches = () => {
   return (
  
-    <ScrollView style={{backgroundColor:'#000'}}>
+    <Container >
       <NextLayout />
-    </ScrollView>
+    </Container>
   );
 };
 

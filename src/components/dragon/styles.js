@@ -5,5 +5,5 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
   position: relative;
-  background-color:#000;
+  background-color: ${({theme}) => theme.body};
 `;

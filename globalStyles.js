@@ -7,7 +7,9 @@ export const Button = styled.Pressable`
   height: 40px;
   justify-content: center;
   align-items: center;
-  z-index: 10;
+  border-radius:50;
+  z-index: 999;
+  position:absolute;
 `;
 export const Text = styled.Text`
   color: ${({theme}) => theme.text};
@@ -15,8 +17,10 @@ export const Text = styled.Text`
 `;
 export const Header = styled.View`
   background-color: ${({theme}) => theme.body};
-  /* position:absolute;
-  z-index:99999;
-  left:20px;
-  top:20px; */
+  z-index:999;
+border-radius:50;
+  width:50px;
+  height:50px;
+  justify-content:center;
+  align-items:center
 `;

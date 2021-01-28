@@ -3,26 +3,26 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   width: 100%;
   margin-bottom: 40px;
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   border-radius: 25px;
   padding: 30px 20px;
-  background-color: #000;
+  background-color: ${({theme}) => theme.body};
 `;
 
 export const Info = styled.View`
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   padding: 40px 15px;
 `;
 export const Name = styled.Text`
   text-transform: uppercase;
   font-weight: 600;
   font-size: 28px;
-  color: #fff;
+  color: ${({theme}) => theme.text};
   padding-left:15px;
 `;
 export const Letter = styled.Text`
   padding: 30px 15px 0;
-  color: #fff;
+  color: ${({theme}) => theme.text};
 
 `;
 export const Lists = styled.View`
@@ -39,18 +39,18 @@ export const Ul = styled.View`
 `;
 
 export const ListItem = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
 `;
 export const ListHead = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   font-size:24px
 
 `;
 export const StatusText = styled.Text`
-  color: red;
+  color: ${({theme}) => theme.succes};
   font-size: 24px;
   text-align: center;
-  border: 2px solid red;
+  border: 2px solid ${({theme}) => theme.succes};
   padding: 10px 40px;
   text-transform: uppercase;
 `;

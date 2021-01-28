@@ -13,21 +13,21 @@ export const Overlay = styled.View`
   left: 0;
   top: 0;
   bottom: 0;
-  right:0;
+  right: 0;
   opacity: 0.7;
   background-color: #000;
 `;
 export const Box = styled.View`
-  border-radius:20px;
+  border-radius: 20px;
   opacity: 0.8;
-  background-color: #000;
-  width:90%;
-  padding:60px 0;
-  z-index:1;
-  text-align:center;
+  background-color: ${({theme}) => theme.body};
+  width: 90%;
+  padding: 60px 0;
+  z-index: 1;
+  text-align: center;
 `;
 export const Title = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   text-align:center;
   font-size:55px;
   font-weight:700;
@@ -42,7 +42,7 @@ export const TimerContainer = styled.View`
   justify-content:center;
 `;
 export const Number = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   text-align:center;
   font-size:35px;
   font-weight:700;
@@ -50,7 +50,7 @@ export const Number = styled.Text`
   text-align:center;
 `;
 export const NumberTime = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   text-align:center;
   font-size:15px;
   font-weight:500;
@@ -66,7 +66,7 @@ export const CounterInfo = styled.View`
   margin-top:30px;
 `;
 export const CounterInfoItem = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   font-size:20px
 `;
 export const CounterInfoType = styled.Text`

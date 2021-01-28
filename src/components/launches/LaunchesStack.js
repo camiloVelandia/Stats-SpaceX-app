@@ -1,19 +1,22 @@
-import React from 'react';
+import React, {useContext } from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {View, Image} from 'react-native';
 import LaunchesScreen from './LaunchesScreen';
 import PastLaunches from './PastLaunches';
 import NextLaunches from './NextLaunches';
 import Colors from 'statSpaceX/src/res/colors';
+import {ThemeContext} from 'styled-components';
+
 
 const Stack = createStackNavigator();
 
 const LaunchesStack = () => {
+  const themeContext = useContext(ThemeContext);
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: Colors.black,
+          backgroundColor: themeContext.body,
         },
         headerTitleAlign: 'center',
         headerTitle: (
@@ -26,7 +29,7 @@ const LaunchesStack = () => {
           </View>
         ),
 
-        headerTintColor: Colors.white,
+        headerTintColor: themeContext.text,
       }}>
       <Stack.Screen name="Launches" component={LaunchesScreen} />
       <Stack.Screen name="PastLaunches" component={PastLaunches} />

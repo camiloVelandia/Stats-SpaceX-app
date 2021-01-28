@@ -5,12 +5,12 @@ export const Section = styled.View`
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 40px;
-  border: 1px #fff;
+  border: 1px ${({theme}) => theme.text};
 `;
 
 export const Title = styled.Text`
-  background-color: #fff;
-  color: #000;
+  background-color: ${({theme}) => theme.text};
+  color: ${({theme}) => theme.body};
   padding: 20px 0;
   font-size: 36px;
   text-transform: uppercase;

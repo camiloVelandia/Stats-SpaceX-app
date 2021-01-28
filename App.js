@@ -50,6 +50,7 @@ const App = () => {
       setTheme('light');
     }
   };
+  
 
   return (
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
@@ -63,7 +64,7 @@ const App = () => {
               tabBarOptions={{
                 tintColor: '#ED3636',
                 style: {
-                  backgroundColor: '#000',
+                  backgroundColor: theme === 'light' ? '#fff' : '#000'
                 },
               }}>
               <Tabs.Screen

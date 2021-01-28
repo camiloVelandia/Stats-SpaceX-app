@@ -12,12 +12,12 @@ export const Btn = styled.Pressable`
   width: 60%;
   margin:0 auto;
   margin-bottom: 40px;
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   text-align: center;
   padding: 20px 0;
 `;
 export const Text = styled.Text`
 text-transform: capitalize;
-  color: #fff;
+  color: ${({theme}) => theme.text};
   text-align:center
 `;

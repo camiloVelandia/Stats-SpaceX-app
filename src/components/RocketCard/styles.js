@@ -3,7 +3,7 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   width: 100%;
   margin-bottom: 40px; 
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   border-radius: 25px;
   padding: 30px 20px;
   
@@ -15,7 +15,7 @@ export const Main = styled.View`
 `;
 
 export const Info = styled.View`
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   padding: 40px 15px;
   
 `;
@@ -32,12 +32,12 @@ export const Name = styled.Text`
   font-size: 30px;
   font-weight:700;
   margin-bottom:15px;
-  color: #fff;
+  color: ${({theme}) => theme.text};
   text-transform:uppercase;
 `;
 export const Text = styled.Text`
   font-size: 14px;
-  color: #fff;
+  color: ${({theme}) => theme.text};
 `;
 
 export const Ul = styled.View`
@@ -52,21 +52,25 @@ export const UlHead = styled.Text`
   margin: 0;
   font-weight:700;
   padding-bottom: 10px;
-  color: #fff;
+  color: ${({theme}) => theme.text};
 `;
 export const UlLi = styled.Text`
   text-transform: capitalize;
   font-size: 12px;
-  color: #fff;
+  color: ${({theme}) => theme.text};
 `;
 export const Status = styled.View`
     margin: 0 auto;
 `;
 export const StatusText = styled.Text`
-border:2px solid red;
-padding: 10px 20px;
-font-size: 18px;
-color: red;
-width:300px;
-text-align:center
+  border: ${(props) =>
+    props.status === 'active'
+      ? `2px solid ${props.theme.succes}`
+      : '2px solid red'};
+  padding: 10px 20px;
+  font-size: 18px;
+  color: ${(props) =>
+    props.status === 'active' ? `${props.theme.succes}` : 'red'};
+  width: 300px;
+  text-align: center;
 `;

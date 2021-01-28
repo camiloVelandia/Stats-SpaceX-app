@@ -6,7 +6,7 @@ const RocketCard = (props) => {
     <Container>
       <Main>
         <Image source={{uri: `${props.image}`}} />
-          
+
         <Info>
           <Name>{props.name}</Name>
           <Text>{props.info}</Text>
@@ -34,8 +34,8 @@ const RocketCard = (props) => {
           </Ul>
         </Info>
       </Main>
-      <Status status={props.status}>
-        <StatusText>status: {props.status}</StatusText>
+      <Status >
+        <StatusText status={props.status}>status: {props.status}</StatusText>
       </Status>
     </Container>
   );

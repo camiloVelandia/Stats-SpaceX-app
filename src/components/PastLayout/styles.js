@@ -18,8 +18,8 @@ export const Pagination = styled.Pressable`
   margin: 0 auto;
   margin-top: 70px;
   background-color: transparent;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid ${({theme}) => theme.text};
+  color: ${({theme}) => theme.text};
   align-self: center;
   font-weight: 400;
   text-align: center;
@@ -28,7 +28,7 @@ export const Pagination = styled.Pressable`
   padding:15px 20px
 `;
 export const Text = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
 `;
 
 export const Loader = styled.ActivityIndicator`

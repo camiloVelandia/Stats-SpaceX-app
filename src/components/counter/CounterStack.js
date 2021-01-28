@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {createStackNavigator} from '@react-navigation/stack'
 import {View, Image} from 'react-native'
 import CounterScreen from './CounterScreen'
 import Colors from 'statSpaceX/src/res/colors'
+import {ThemeContext} from 'styled-components';
+
 
 const Stack = createStackNavigator()
 
 const CounterStack = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Stack.Navigator
       screenOptions={{
          headerStyle:{
-           backgroundColor: Colors.black
+           backgroundColor: themeContext.body
          },
         headerTitleAlign: 'center',
         headerTitle: (

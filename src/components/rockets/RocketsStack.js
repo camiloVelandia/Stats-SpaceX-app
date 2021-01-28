@@ -1,17 +1,20 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {View, Image} from 'react-native';
 import RocketScreen from './RocketScreen';
 import Colors from 'statSpaceX/src/res/colors';
+import {ThemeContext} from 'styled-components';
 
 const Stack = createStackNavigator();
 
 const RocketStack = () => {
+  const themeContext = useContext(ThemeContext);
+
   return (
     <Stack.Navigator
       screenOptions={{
         headerStyle: {
-          backgroundColor: Colors.black,
+          backgroundColor: themeContext.body,
         },
         headerTitleAlign: 'center',
         headerTitle: (

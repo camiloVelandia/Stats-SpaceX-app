@@ -1,12 +1,12 @@
 import React from 'react';
 import PastLayout from '../../PastLayout';
-import {ScrollView, Text} from 'react-native';
+import {Container} from './styles';
 
 const PastLaunches = () => {
   return (
-    <ScrollView style={{backgroundColor:'#000'}}>
+    <Container >
       <PastLayout />
-    </ScrollView>
+    </Container>
   );
 };
 

@@ -2,15 +2,15 @@ import styled from 'styled-components/native';
 
 export const Section = styled.View`
   margin-bottom: 40px;
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
   text-align: center;
   width: 100%;
  
 `;
 export const Title = styled.Text`
-  background-color: #fff;
-  color:#000;
-  padding: 20px ;
+  background-color: ${({theme}) => theme.text};
+  color: ${({theme}) => theme.body};
+  padding: 20px;
   font-size: 30px;
   text-transform: uppercase;
   font-weight: 600;
@@ -30,11 +30,11 @@ export const Name = styled.Text`
   text-transform: uppercase;
   padding: 0 20px;
   margin: 0;
-  color: #fff;
+  color: ${({theme}) => theme.text};
   font-weight:700;
 `;
 export const Text = styled.Text`
-color: #fff;
+color: ${({theme}) => theme.text};
   padding: 20px 20px;
   text-align: justify;
   padding-bottom: 30px;
@@ -58,11 +58,11 @@ export const BulletInfo = styled.Text`
     font-size: 12px;
     padding: 5px 5px;
     text-transform: uppercase;
-    color: #fff;
+    color: ${({theme}) => theme.text};
   
 `;
 export const BulletProp = styled.Text`
-    color: #fff;
+    color: ${({theme}) => theme.text};
     margin: 0;
     text-align: center;
     font-size: 12px;

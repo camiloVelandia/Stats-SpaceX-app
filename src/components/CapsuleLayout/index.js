@@ -28,7 +28,7 @@ const CapsulesLayout = () => {
           name={item.name}
           info={item.description}
           image={item.flickr_images[0]}
-          status={item.active ? 'asctive' : 'disabled'}
+          status={item.active ? 'active' : 'disabled'}
           capacity={item.crew_capacity}
           first_flight={item.first_flight}
           type={item.type}

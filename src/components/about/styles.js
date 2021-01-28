@@ -20,13 +20,12 @@ export const Overlay = styled.View`
 export const Container = styled.View`
   border-radius: 20px;
   opacity: 0.8;
-  background-color: #000;
+  background-color: ${({theme}) => theme.body};
   width: 90%;
   padding: 40px 20px;
   z-index: 1;
   text-align: center;
-  margin:30px 0;
-  
+  margin: 30px 0;
 `;
 export const Article = styled.View`
   margin: 40px 0;
@@ -36,12 +35,12 @@ export const Title = styled.Text`
   margin: 0;
   font-size: 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: ${({theme}) => theme.text};
   font-weight:700;
   text-align:center;
 `;
 export const Letter = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   margin: 0;
   font-size: 18px;
   max-width: 700px;
@@ -55,12 +54,12 @@ export const ItemTitle = styled.Text`
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    color: #fff;
+    color: ${({theme}) => theme.text};
     font-weight:700;
     padding-bottom:10px
 `;
 export const ItemLi = styled.Text`
-  color: #fff;
+  color: ${({theme}) => theme.text};
   padding-bottom: 4px;
   width:100%;
   justify-content:flex-end;
@@ -78,6 +77,6 @@ export const Loader = styled.ActivityIndicator`
   margin-top: 60px;
 `;
 export const LoaderContainer = styled.View`
-  flex:1;
-  background-color:#000;
+  flex: 1;
+  background-color: ${({theme}) => theme.body};
 `;

@@ -5,18 +5,18 @@ export const Section = styled.View`
   margin: 0 auto;
   margin-top: 60px;
   margin-bottom: 40px;
-  border: 1px solid #fff;
+  border: 1px solid ${({theme}) => theme.text};
 `;
 export const Title = styled.View`
-  background-color: #fff;
+  background-color: ${({theme}) => theme.text};
   text-align: center;
   padding: 15px;
 `;
 export const TitleText = styled.Text`
-    color: #000;
-    text-transform: uppercase;
-    font-size: 30px;
-    margin: 0;
+  color: ${({theme}) => theme.body};
+  text-transform: uppercase;
+  font-size: 30px;
+  margin: 0;
 `;
 export const Main = styled.View`
   padding: 20px;
@@ -44,13 +44,13 @@ export const InfoName = styled.Text`
     text-transform: uppercase;
     margin: 0;
     padding-bottom: 15px;
-    color: #fff;
+    color: ${({theme}) => theme.text};
     font-weight:700;
 `;
 export const InfoText = styled.Text`
     font-size: 14px;
     margin: 0;
-    color: #fff;
+    color: ${({theme}) => theme.text};
 `;
 
 export const Bullets = styled.View`
@@ -65,7 +65,7 @@ export const BulletItem= styled.Text`
     padding-bottom: 10px;
     text-transform: capitalize;
     text-align: center;
-    color: #fff;
+    color: ${({theme}) => theme.text};
 `;
 export const Loader = styled.ActivityIndicator`
   margin-top: 60px;
