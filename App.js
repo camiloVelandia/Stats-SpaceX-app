@@ -18,7 +18,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Image} from 'react-native'
 
 import {ThemeProvider} from 'styled-components';
-import {Button, Text, Header} from './globalStyles'
+import {Button, Text, ThemeMode, Container, Content} from './globalStyles';
 
 const lightTheme = {
   body: '#E2E2E2',
@@ -53,18 +53,31 @@ const App = () => {
   
 
   return (
-      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-      <Header>
-      <Button onPress={toggleTheme}>
-        <Text>{theme === 'light' ? '🌙' : '☀️'}</Text>
-      </Button>
-      </Header>
-        <NavigationContainer>
+    <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+      <Container>
+        <ThemeMode>
+          <Button
+            onPress={toggleTheme}
+            style={{
+              shadowColor: theme === 'light' ? '#fff' : '#000',
+              shadowOffset: {
+                width: 0,
+                height: 2,
+              },
+              shadowOpacity: 0.25,
+              shadowRadius: 4.84,
+              elevation: 5,
+            }}>
+            <Text>{theme === 'light' ? '🌙' : '☀️'}</Text>
+          </Button>
+        </ThemeMode>
+        <Content>
+          <NavigationContainer>
             <Tabs.Navigator
               tabBarOptions={{
                 tintColor: '#ED3636',
                 style: {
-                  backgroundColor: theme === 'light' ? '#fff' : '#000'
+                  backgroundColor: theme === 'light' ? '#fff' : '#000',
                 },
               }}>
               <Tabs.Screen
@@ -140,8 +153,10 @@ const App = () => {
                 }}
               />
             </Tabs.Navigator>
-        </NavigationContainer>
-      </ThemeProvider>
+          </NavigationContainer>
+        </Content>
+      </Container>
+    </ThemeProvider>
   );
 };
 
