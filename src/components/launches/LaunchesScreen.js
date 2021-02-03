@@ -4,6 +4,7 @@ import {Container} from './styles';
 import Latest from '../../components/Latest';
 import RecentLayout from '../../components/RecentLayout';
 import BtnLaunches from '../../components/BtnLaunches';
+import Search from '../../components/Search';
 import {ScrollView, Pressable, Text} from 'react-native';
 
 
@@ -16,9 +17,10 @@ const LaunchesScreen = (props) => {
           title={'launches'}
           backImage={require('statSpaceX/src/assets/images/starlink1.webp')}
         />
+        <Search props={props} />
         <Latest />
         <RecentLayout />
-        <BtnLaunches props={props}/>
+        <BtnLaunches props={props} />
       </ScrollView>
     </Container>
   );

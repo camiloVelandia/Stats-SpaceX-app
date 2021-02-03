@@ -4,9 +4,6 @@ import {StyleSheet} from 'react-native'
 
 const BtnLaunches = (props) => {
 
-
-
-
   const target= props
   const HandlePress=(prop, dest)=>{
     prop.props.navigation.navigate(dest);

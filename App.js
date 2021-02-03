@@ -30,7 +30,7 @@ const lightTheme = {
 export const darkTheme = {
   body: '#000',
   Alpha: 'rgba(0,0,0,.8)',
-  text: '#FAFAFA',
+  text: '#fafafa',
   succes: '#98e832',
 };
 

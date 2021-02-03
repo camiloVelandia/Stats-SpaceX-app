@@ -4,7 +4,7 @@ import {View, Image} from 'react-native';
 import LaunchesScreen from './LaunchesScreen';
 import PastLaunches from './PastLaunches';
 import NextLaunches from './NextLaunches';
-import Colors from 'statSpaceX/src/res/colors';
+import Results from './Results';
 import {ThemeContext} from 'styled-components';
 
 
@@ -34,6 +34,7 @@ const LaunchesStack = () => {
       <Stack.Screen name="Launches" component={LaunchesScreen} />
       <Stack.Screen name="PastLaunches" component={PastLaunches} />
       <Stack.Screen name="NextLaunches" component={NextLaunches} />
+      <Stack.Screen name="Results" component={Results} />
     </Stack.Navigator>
   );
 };
