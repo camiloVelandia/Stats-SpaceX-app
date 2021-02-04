@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react';
-import { Text } from 'react-native'
 import getFilterLaunches from '../../../services/getFilterLaunches';
 import PastCard from '../../../components/PastCard';
-import {Container, Title} from './styles'
-const Results = () => {
+import {Container, Title, NotFound, ResultContainer} from './styles';
+const Results = (props) => {
     const [launches, setlaunches] = useState({docs: []});
     const [result, setresult] = useState([]);
-    const [keyword, setkeyword] = useState('key');
+    const [keyword, setkeyword] = useState(props.route.params.keyword);
 
     useEffect(() => {
       getFilterLaunches(keyword).then((data) => {
@@ -16,19 +15,15 @@ const Results = () => {
 
     useEffect(() => {
       setresult(launches.docs);
-      setkeyword('key');
+      setkeyword(keyword);
     }, [launches]);
-
-
 
   return (
     <Container>
-      <Title >
-         results for: {keyword}
-      </Title>
-      {/* <div className="resultContainer">
+      <Title>results for: {keyword}</Title>
+      <ResultContainer>
         {!result.length > 0 ? (
-          <p className="notFound">Not found results</p>
+          <NotFound className="notFound">Not found results</NotFound>
         ) : (
           result.map((item, index) => {
             return (
@@ -44,7 +39,7 @@ const Results = () => {
             );
           })
         )}
-      </div> */}
+      </ResultContainer>
     </Container>
   );
 };

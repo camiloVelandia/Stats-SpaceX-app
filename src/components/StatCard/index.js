@@ -4,7 +4,6 @@ import {VictoryLabel, VictoryTooltip, VictoryPie} from 'victory-native';
 
 const StatCard = (props) => {
   const dataNumber = props.items.datasets.map((item, index)=>{
-    console.log(item)
     return {x: item[0].label[index], y: item[0].number[index]};
   })
   return (

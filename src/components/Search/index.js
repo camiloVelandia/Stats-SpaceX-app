@@ -5,11 +5,9 @@ const Search = (props) => {
 
   const [keyword, setkeyword] = useState('');
 
-  console.log(keyword)
   const target = props;
   const handleSubmit = (prop) => {
-    prop.props.navigation.navigate('Results');
-    console.log('envio')
+    prop.props.navigation.navigate('Results',{keyword});
     setkeyword('')
   };
 
