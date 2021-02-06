@@ -74,3 +74,7 @@ export const CounterInfoType = styled.Text`
   text-transform:capitalize;
   margin-right:5px
 `;
+export const Text = styled.Text`
+  text-transform: capitalize;
+  color: ${({theme}) => theme.text};
+`;

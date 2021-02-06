@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {View, Text} from 'react-native'
-import {Container, Overlay, Box, Title, NumberContainer, Number, NumberTime, TimerContainer, CounterInfo, CounterInfoItem, CounterInfoType} from './styles'
+import {Container, Overlay, Text, Box, Title, NumberContainer, Number, NumberTime, TimerContainer, CounterInfo, CounterInfoItem, CounterInfoType} from './styles'
 import getNextLaunch from '../../services/getNextLaunch';
 import getOneRocket from '../../services/getOneRocket';
 

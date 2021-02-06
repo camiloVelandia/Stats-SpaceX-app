@@ -15,7 +15,6 @@ export const Main = styled.View`
 `;
 
 export const Info = styled.View`
-  border: 1px solid ${({theme}) => theme.text};
   padding: 40px 15px;
   
 `;
