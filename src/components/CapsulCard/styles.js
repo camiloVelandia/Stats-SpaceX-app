@@ -2,15 +2,14 @@ import styled from 'styled-components/native';
 
 export const Container = styled.View`
   width: 100%;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   border: 1px solid ${({theme}) => theme.text};
   border-radius: 25px;
-  padding: 30px 20px;
+  padding: 30px 15px;
   background-color: ${({theme}) => theme.body};
 `;
 
 export const Info = styled.View`
-  border: 1px solid ${({theme}) => theme.text};
   padding: 40px 15px;
 `;
 export const Name = styled.Text`

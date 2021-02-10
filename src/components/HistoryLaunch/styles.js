@@ -6,6 +6,7 @@ export const Section = styled.View`
   margin-top: 60px;
   margin-bottom: 40px;
   border: 1px ${({theme}) => theme.text};
+  
 `;
 
 export const Title = styled.Text`

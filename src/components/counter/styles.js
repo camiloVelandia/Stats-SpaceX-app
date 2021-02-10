@@ -22,14 +22,14 @@ export const Box = styled.View`
   opacity: 0.8;
   background-color: ${({theme}) => theme.body};
   width: 90%;
-  padding: 60px 0;
+  padding: 6% 0;
   z-index: 1;
   text-align: center;
 `;
 export const Title = styled.Text`
   color: ${({theme}) => theme.text};
   text-align:center;
-  font-size:55px;
+  font-size:50px;
   font-weight:700;
   padding-bottom:50px;
   text-transform:uppercase
@@ -44,7 +44,7 @@ export const TimerContainer = styled.View`
 export const Number = styled.Text`
   color: ${({theme}) => theme.text};
   text-align:center;
-  font-size:35px;
+  font-size:28px;
   font-weight:700;
   margin:0 auto;
   text-align:center;
@@ -52,7 +52,7 @@ export const Number = styled.Text`
 export const NumberTime = styled.Text`
   color: ${({theme}) => theme.text};
   text-align:center;
-  font-size:15px;
+  font-size:11px;
   font-weight:500;
   margin:0 auto;
   text-align:center;
@@ -67,7 +67,7 @@ export const CounterInfo = styled.View`
 `;
 export const CounterInfoItem = styled.Text`
   color: ${({theme}) => theme.text};
-  font-size:20px
+  font-size:18px
 `;
 export const CounterInfoType = styled.Text`
   color: rgb(0, 171, 102);

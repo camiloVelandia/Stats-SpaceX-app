@@ -1,9 +1,9 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  flex-wrap: wrap;
-  padding: 40px 30px;
+  padding: 30px 15px 0px;
   justify-content: space-between;
+  width: 100%;
 `;
 
 export const Loader = styled.ActivityIndicator`

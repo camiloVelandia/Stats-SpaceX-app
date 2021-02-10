@@ -1,10 +1,10 @@
 import styled from 'styled-components/native';
 
 export const Section = styled.View`
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
-  margin-top: 60px;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   border: 1px solid ${({theme}) => theme.text};
 `;
 export const Title = styled.View`
