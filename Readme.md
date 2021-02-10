@@ -8,7 +8,7 @@
 
 <div align="center">
 
-> Download Apk:   
+> Download Apk: https://docs.google.com/uc?export=download&id=1WM7eqRQds1nnPxWz6BM06dbEmvUoP_ge  
 </div>
 
 
